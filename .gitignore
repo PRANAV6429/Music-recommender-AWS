@@ -1,0 +1,12 @@
+# Ignore virtual environment
+eb-env/
+
+# Ignore cache and compiled files
+__pycache__/
+*.pyc
+
+# Ignore dotenv credentials
+.env
+
+# Ignore VSCode settings (optional)
+.vscode/

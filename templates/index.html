@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Recommender</title>
+</head>
+<body>
+    <h1>🎵 AI Music Recommendation</h1>
+   <form method="POST">
+    <input type="text" name="user_message" placeholder="How are you feeling today?" />
+    <input type="text" name="song_title" placeholder="Optional: Enter a song name" />
+    <button type="submit">Get Recommendations</button>
+</form>
+
+    {% if recommendations %}
+        <h2>Recommended Songs:</h2>
+        <ul>
+            {% for song in recommendations %}
+                <li><strong>{{ song.track_name }}</strong> by <em>{{ song.artist }}</em></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if mood %}
+    <p><strong>Detected Mood:</strong> {{ mood | capitalize }}</p>
+{% endif %}
+
+</body>
+</html>
